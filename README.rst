@@ -1,3 +1,21 @@
+The fork
+========
+
+This is a fork of <https://github.com/alexjc/neural-doodle> to make it running on OsX ElCapitan.
+Well, at least it works on my Mac:
+
+    MacBook Pro (Retina, 15-inch, Late 2013)
+    2.6 GHz Intel Core i7
+    16 GB 1600 MHz DDR3
+    Intel Iris Pro 1536 MB
+
+Changes are done based on this issue: <https://github.com/alexjc/neural-doodle/issues/8>
+
+I think these changes need a bit of more adaptation because they might break things in
+other environments. That is why no pull request.
+
+
+
 Neural Doodle
 =============
 

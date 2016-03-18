@@ -6,6 +6,7 @@
 #   July 18-20, 2016 in Vienna/Austria.
 #
 
+from theano.compile.nanguardmode import NanGuardMode
 import os
 import sys
 import bz2
@@ -291,7 +292,8 @@ class NeuralGenerator(object):
         # Compile a function to run on the GPU to extract patches for all layers at once.
         extractor = theano.function(
                         [self.model.tensor_img, self.model.tensor_map],
-                        self.extract_patches([self.model.tensor_outputs['sem'+l] for l in self.style_layers]))
+                        self.extract_patches([self.model.tensor_outputs['sem'+l] for l in self.style_layers]),
+                        mode=NanGuardMode(nan_is_error=True, inf_is_error=True, big_is_error=False))
         result = extractor(self.style_image, self.style_map)
 
         # For each layer, we now have a set of patches and their magnitude.

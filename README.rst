@@ -1,3 +1,10 @@
+DEPRECATED
+==========
+
+You shouldn't need this fork anymore since the original code base now should work on OSX as well.
+
+See https://github.com/alexjc/neural-doodle/issues/8
+
 The fork
 ========
 
